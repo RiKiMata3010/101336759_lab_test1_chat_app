@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Messenger App</title>
+        <meta name="description" content="Socket.io practice">
+        <meta name="author" content="Phoenix Armand Ani">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="script.js" type="module"></script>
+
+        <style>
+            body {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                height: 100vh;
+                width: 50%;
+                max-width: 1200px;
+                background-color: beige;
+            }
+            #container {
+                display: block;
+                border: 2px solid black;
+                padding: 5px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                width: 610px;
+                height: 300px;
+                overflow-y: auto;
+                background-color: gray;
+            }
+            #form {
+                position: fixed;
+                left: 20;
+                right: 20;
+                bottom: 40;
+            }
+            
+            #message-container div {
+                background-color: #CCC;
+                border-radius: 5px;
+                padding: 5px;
+                
+                margin-bottom: 5px;
+                resize: horizontal;
+            }
+            #message-container div:nth-child(2n) {
+                background-color: orange;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            
+            #message-input {
+                flex-grow: 1;
+            }
+            button {
+                background: #2196F3;
+                color: #fff;
+                font-family: arial;
+                border-radius: 3px;
+                overflow: hidden;
+                text-decoration: none;
+                width: 80px;
+            }
+            input {
+                width: 420px;
+                justify-content: center;
+                margin-left: 50px;
+            }
+            #room {
+                margin-left: 65px;
+            }
+            h1{
+                text-align: center; 
+            }
+
+        </style>
+
+        <title>Messenger</title>
+
+    </head>
+    <body>
+
+    <h1>Phoenix's Chat</h1>
+    <div id="main">
+        <div id="container">
+        <div id="message-container"></div>
+        </div>
+        <form id="form">
+            <label for="input" id="box">Message:</label>
+            <input type="text" id="input" placeholder="Enter Message : ">
+            <button type="submit" id="submit-button">Submit</button>
+            <br>
+            <br>
+            <label for="room" id="box">Room:</label>
+            <input type="text" id="room" placeholder="Enter Room ID :">
+            <button type="button" id="room-button">Join</button>
+        </form>
+    </div>
+    </body>
+</html>
